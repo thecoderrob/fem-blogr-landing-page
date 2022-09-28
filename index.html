@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Styles-->
+    <link rel="stylesheet" href="index.css" />
+
+    <!--Script-->
+    <script src="index.js" defer></script>
+
+    <title>Frontend Mentor | Blogr | thecoderrob</title>
+  </head>
+  <body>
+    <header>
+      <div class="container--logo-nav | container">
+        <div>
+          <img src="/images/logo.svg" alt="" />
+        </div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-expanded="false"
+          onclick="toggleNavMenu()"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="container--nav | container flex">
+          <nav class="primary-nav">
+            <ul role="list" class="flex">
+              <li>
+                <button
+                  class="nav-menu-btn"
+                  aria-selected="false"
+                  data-menu-index="0"
+                  onclick="toggleNavSubmenu(event)"
+                >
+                  Product
+                </button>
+                <div class="nav-submenu" aria-expanded="false">
+                  <ul role="list" class="flow">
+                    <li>
+                      <a href="#">Overview</a>
+                    </li>
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#">Marketplace</a>
+                    </li>
+                    <li>
+                      <a href="#">Features</a>
+                    </li>
+                    <li>
+                      <a href="#">Integrations</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-menu-btn"
+                  aria-selected="false"
+                  data-menu-index="1"
+                  onclick="toggleNavSubmenu(event)"
+                >
+                  Company
+                </button>
+                <div class="nav-submenu" aria-expanded="false">
+                  <ul role="list" class="flow">
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Team</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Careers</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-menu-btn"
+                  aria-selected="false"
+                  data-menu-index="2"
+                  onclick="toggleNavSubmenu(event)"
+                >
+                  Connect
+                </button>
+                <div class="nav-submenu" aria-expanded="false">
+                  <ul role="list" class="flow">
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                    <li>
+                      <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                      <a href="#">LinkedIn</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="primary-nav-cta | flex">
+            <button class="login | cta">Login</button>
+            <button class="sign-up | cta">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container--title | container flow">
+        <div class="title | flow">
+          <h1 class="fs-900 fw-medium text-white">
+            A modern publishing platform
+          </h1>
+          <p class="text-white">
+            Grow your audience and build your online brand
+          </p>
+        </div>
+
+        <div class="title-cta | flex">
+          <button class="start-for-free | cta">Start for Free</button>
+          <button class="learn-more | cta">Learn More</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid--section | grid" data-image-right="true">
+        <div class="section-title">
+          <h2>Designed for the future</h2>
+        </div>
+
+        <article class="container--article | container flow">
+          <div>
+            <h3 class="fs-500 fw-medium">Introducing an extensible editor</h3>
+            <p>
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="fs-500 fw-medium">Robust content management</h3>
+            <p>
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
+        </article>
+
+        <div class="article-image">
+          <img
+            src="/images/illustration-editor-desktop.svg"
+            alt=""
+            class="lg-only"
+          />
+
+          <img
+            src="/images/illustration-editor-mobile.svg"
+            alt=""
+            class="sm-only"
+          />
+        </div>
+      </section>
+
+      <section class="grid--section | grid bg-gradient">
+        <article class="container--article | container">
+          <div>
+            <h3 class="fs-600 text-white">State of the Art Infrastructure</h3>
+            <p class="text-white">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
+        </article>
+
+        <div class="article-image">
+          <img src="/images/illustration-phones.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="grid--section | grid">
+        <article class="container--article | container flow">
+          <div>
+            <h3 class="fs-500">Free, open, simple</h3>
+            <p>
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="fs-500">Powerful tooling</h3>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
+        </article>
+
+        <div class="article-image">
+          <img
+            src="/images/illustration-laptop-desktop.svg"
+            alt=""
+            class="lg-only"
+          />
+
+          <img
+            src="/images/illustration-laptop-mobile.svg"
+            alt=""
+            class="sm-only"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="flex--footer | flex container">
+        <div class="center">
+          <img src="/images/logo.svg" alt="" />
+        </div>
+        <div>
+          <span class="d-block">Product</span>
+          <ul role="list" class="flow">
+            <li>
+              <a href="#">Overview</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Marketplace</a>
+            </li>
+            <li>
+              <a href="#">Features</a>
+            </li>
+            <li>
+              <a href="#">Integrations</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span class="d-block">Company</span>
+          <ul role="list" class="flow">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Team</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span class="d-block">Connect</span>
+          <ul role="list" class="flow">
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Newsletter</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
