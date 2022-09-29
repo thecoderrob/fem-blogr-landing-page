@@ -25,13 +25,14 @@
     <header>
       <div class="container--logo-nav | container">
         <div>
-          <img src="/images/logo.svg" alt="" />
+          <img src="/images/logo.svg" alt="website logo" />
         </div>
 
         <button
           class="mobile-nav-toggle"
           aria-expanded="false"
           onclick="toggleNavMenu()"
+          type="button"
         >
           <span class="sr-only">Menu</span>
         </button>
@@ -45,6 +46,7 @@
                   aria-selected="false"
                   data-menu-index="0"
                   onclick="toggleNavSubmenu(event)"
+                  type="button"
                 >
                   Product
                 </button>
@@ -74,6 +76,7 @@
                   aria-selected="false"
                   data-menu-index="1"
                   onclick="toggleNavSubmenu(event)"
+                  type="button"
                 >
                   Company
                 </button>
@@ -100,6 +103,7 @@
                   aria-selected="false"
                   data-menu-index="2"
                   onclick="toggleNavSubmenu(event)"
+                  type="button"
                 >
                   Connect
                 </button>
@@ -121,8 +125,8 @@
           </nav>
 
           <div class="primary-nav-cta | flex">
-            <button class="login | cta">Login</button>
-            <button class="sign-up | cta">Sign Up</button>
+            <button class="login | cta type="button"">Login</button>
+            <button class="sign-up | cta" type="button">Sign Up</button>
           </div>
         </div>
       </div>
@@ -138,8 +142,8 @@
         </div>
 
         <div class="title-cta | flex">
-          <button class="start-for-free | cta">Start for Free</button>
-          <button class="learn-more | cta">Learn More</button>
+          <button class="start-for-free | cta" type="button">Start for Free</button>
+          <button class="learn-more | cta" type="button">Learn More</button>
         </div>
       </div>
     </header>
@@ -179,6 +183,7 @@
             <img
               src="/images/illustration-editor-desktop.svg"
               class="lg-only"
+              alt="laptop with line chart"
             />
 
             <img src="/images/illustration-editor-mobile.svg" class="sm-only" />
@@ -202,7 +207,7 @@
             </div>
 
             <div class="article-image">
-              <img src="/images/illustration-phones.svg" />
+              <img src="/images/illustration-phones.svg" alt="cellphone showing Blogr page" />
             </div>
           </div>
         </article>
@@ -235,9 +240,10 @@
             <img
               src="/images/illustration-laptop-desktop.svg"
               class="lg-only"
+              alt="an open laptop"
             />
 
-            <img src="/images/illustration-laptop-mobile.svg" class="sm-only" />
+            <img src="/images/illustration-laptop-mobile.svg" class="sm-only" alt="an open laptop"/>
           </div>
         </article>
       </section>
