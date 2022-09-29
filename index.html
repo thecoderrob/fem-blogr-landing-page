@@ -39,19 +39,19 @@
 
         <div class="container--nav | container flex">
           <nav class="primary-nav">
-            <ul role="list" class="flex">
+            <ul class="flex">
               <li>
                 <button
+                  type="button"
                   class="nav-menu-btn"
                   aria-selected="false"
-                  data-menu-index="0"
+                  value="0"
                   onclick="toggleNavSubmenu(event)"
-                  type="button"
                 >
                   Product
                 </button>
                 <div class="nav-submenu" aria-expanded="false">
-                  <ul role="list" class="flow">
+                  <ul class="flow">
                     <li>
                       <a href="#">Overview</a>
                     </li>
@@ -72,16 +72,16 @@
               </li>
               <li>
                 <button
+                  type="button"
                   class="nav-menu-btn"
                   aria-selected="false"
-                  data-menu-index="1"
+                  value="1"
                   onclick="toggleNavSubmenu(event)"
-                  type="button"
                 >
                   Company
                 </button>
                 <div class="nav-submenu" aria-expanded="false">
-                  <ul role="list" class="flow">
+                  <ul class="flow">
                     <li>
                       <a href="#">About</a>
                     </li>
@@ -99,16 +99,16 @@
               </li>
               <li>
                 <button
+                  type="button"
                   class="nav-menu-btn"
                   aria-selected="false"
-                  data-menu-index="2"
+                  value="2"
                   onclick="toggleNavSubmenu(event)"
-                  type="button"
                 >
                   Connect
                 </button>
                 <div class="nav-submenu" aria-expanded="false">
-                  <ul role="list" class="flow">
+                  <ul class="flow">
                     <li>
                       <a href="#">Contact</a>
                     </li>
@@ -125,8 +125,8 @@
           </nav>
 
           <div class="primary-nav-cta | flex">
-            <button class="login | cta type="button"">Login</button>
-            <button class="sign-up | cta" type="button">Sign Up</button>
+            <button type="button" class="login | cta">Login</button>
+            <button type="button" class="sign-up | cta">Sign Up</button>
           </div>
         </div>
       </div>
@@ -142,8 +142,10 @@
         </div>
 
         <div class="title-cta | flex">
-          <button class="start-for-free | cta" type="button">Start for Free</button>
-          <button class="learn-more | cta" type="button">Learn More</button>
+          <button type="button" class="start-for-free | cta">
+            Start for Free
+          </button>
+          <button type="button" class="learn-more | cta">Learn More</button>
         </div>
       </div>
     </header>
@@ -179,15 +181,13 @@
             </div>
           </div>
 
-          <div class="article-image">
-            <img
-              src="/images/illustration-editor-desktop.svg"
-              class="lg-only"
-              alt="laptop with line chart"
+          <picture class="article-image">
+            <source
+              srcset="/images/illustration-editor-desktop.svg"
+              media="(min-width: 50em)"
             />
-
-            <img src="/images/illustration-editor-mobile.svg" class="sm-only" />
-          </div>
+            <img src="/images/illustration-editor-mobile.svg" alt="laptop showing a line chart" />
+          </picture>
         </article>
 
         <article class="bg-gradient">
@@ -206,9 +206,17 @@
               </div>
             </div>
 
-            <div class="article-image">
-              <img src="/images/illustration-phones.svg" alt="cellphone showing Blogr page" />
-            </div>
+
+            <picture class="article-image">
+              <source
+                srcset="/images/illustration-phones.svg"
+              />
+              <img
+                  src="/images/illustration-phones.svg"
+                  alt="cellphone showing Blogr page"
+                />
+            </picture>
+        </article>
           </div>
         </article>
 
@@ -236,15 +244,13 @@
             </div>
           </div>
 
-          <div class="article-image">
-            <img
-              src="/images/illustration-laptop-desktop.svg"
-              class="lg-only"
-              alt="an open laptop"
+          <picture class="article-image">
+            <source
+              srcset="/images/illustration-laptop-desktop.svg"
+              media="(min-width: 50em)"
             />
-
-            <img src="/images/illustration-laptop-mobile.svg" class="sm-only" alt="an open laptop"/>
-          </div>
+            <img src="/images/illustration-laptop-mobile.svg" alt="an open laptop" />
+          </picture>
         </article>
       </section>
     </main>
@@ -256,7 +262,7 @@
         </div>
         <div>
           <span class="d-block">Product</span>
-          <ul role="list" class="flow">
+          <ul class="flow">
             <li>
               <a href="#">Overview</a>
             </li>
@@ -276,7 +282,7 @@
         </div>
         <div>
           <span class="d-block">Company</span>
-          <ul role="list" class="flow">
+          <ul class="flow">
             <li>
               <a href="#">About</a>
             </li>
@@ -293,7 +299,7 @@
         </div>
         <div>
           <span class="d-block">Connect</span>
-          <ul role="list" class="flow">
+          <ul class="flow">
             <li>
               <a href="#">Contact</a>
             </li>

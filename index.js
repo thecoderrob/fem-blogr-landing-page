@@ -13,7 +13,7 @@ const toggleNavMenu = () => {
 
 const toggleNavSubmenu = (e) => {
   const isSelected = e.target.getAttribute("aria-selected");
-  const selectedIndex = e.target.getAttribute("data-menu-index");
+  const selectedIndex = e.target.value;
 
   const navMenuBtns = document.querySelectorAll(".nav-menu-btn");
   const navSubmenus = document.querySelectorAll(".nav-submenu");
